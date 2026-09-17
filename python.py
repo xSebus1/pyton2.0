@@ -75,3 +75,37 @@ def incijaly(pelne_imie):
 xd = incijaly("Sebastian SAafdafa")
 print(xd)
     
+    
+def nowalista(elementy):
+    return list(set(elementy))
+
+def wielearg(username, **kwargs):
+    return {"username": username, **kwargs}
+
+def czy_anagram(tekst1, tekst2):
+    s1 = "".join(tekst1.lower().split())
+    s2 = "".join(tekst2.lower().split())
+    
+    return sorted(s1) == sorted(s2)
+
+def potworzenia(elementy):
+    ile = {}
+    for element in elementy:
+        ile[element] = ile.get(element, 0) + 1
+    return ile
+
+def karta(text):
+  if len(text) < 4:
+    return text
+  return "*" * (len(text) - 4) + text[-4:]
+
+def rozwiaz(a, b):
+    if a == 0:
+        if b == 0:
+            return "tozsamosciowe"
+        else:
+            return "sprzeczne"
+    else:
+        return -b / a
+
+print(rozwiaz(2, -4))
