@@ -108,4 +108,45 @@ def rozwiaz(a, b):
     else:
         return -b / a
 
-print(rozwiaz(2, -4))
+def modulo(dzielna, dzielnik):
+  if dzielnik == 0:
+    return None
+  return (dzielna // dzielnik, dzielna % dzielnik)
+
+def lista(lista):
+  listaa = []
+  for wiersz in lista:
+    for element in lista:
+        lista.append(element)
+  return listaa
+
+def dlugosc(slowa, min_dlugosc):
+  wynik = []
+  for slowo in slowa:
+    if len(slowo) >= min_dlugosc:
+      wynik.append(slowo)
+  return wynik
+
+def checkOdwroc(zdanie):
+    slowa = zdanie.split()
+    
+    noweslowo = slowa[::-1]
+    return " ".join(noweslowo)
+
+def checkAge(wiek):
+    if wiek <= 12:
+        return "Dziecko"
+    elif wiek >= 13 and wiek < 18:
+        return "Nastolatek"
+    elif wiek >= 18 and wiek < 65:
+        return "Dorosły"
+    elif wiek >= 65:
+        return "Senior"
+
+def czas(sekund):
+    godziny = sekund // 3600
+    reszta = sekund % 3600
+    minuty = reszta // 60
+    sekundReszta = reszta % 60
+
+    return f"{godziny}:{minuty}:{sekundReszta}"
